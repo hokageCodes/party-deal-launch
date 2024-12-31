@@ -21,7 +21,7 @@ export default function HeroSection() {
 }, []);
 
   return (
-    <section className="bg-charcoal font-coolvetica relative flex flex-col lg:flex-row items-center justify-center gap-8 p-8 lg:p-16 h-screen mt-16 md:mt-[-50px]">
+    <section className="bg-charcoal font-coolvetica relative flex flex-col lg:flex-row items-center justify-center gap-8 p-8 lg:p-16 h-screen mt-16">
       {/* Left Side */}
       <div className="flex flex-col items-center lg:items-start gap-6 text-center lg:text-left max-w-4xl z-10 mt-12 lg:mt-0">
         <h1

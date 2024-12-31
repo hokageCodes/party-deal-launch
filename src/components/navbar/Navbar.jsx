@@ -14,11 +14,8 @@ export default function Navbar() {
 
     const pathname = window.location.pathname;
     const bgColor = isScrolled ? "bg-[#f9f9f9]" : "bg-[#f9f9f9]";
-    const textColor = isScrolled ? "text-charcoal" : "text-charcoal";
-    const activeTextColor = "text-white";
     const navHeight = "h-[12vh]";
-
-    const navLinks = ["Home", "Bookings", "company"];
+    const navLinks = ["Home", "Bookings", "Company"];
 
     return (
         <motion.nav
@@ -32,11 +29,17 @@ export default function Navbar() {
                 <a
                     href="/"
                     aria-label="Navigate to Home Page"
-                    className="flex items-center h-full"
+                    className="flex items-center h-full relative z-50"
                 >
                     <div className="relative h-full max-h-full">
                         <img
-                            src={isScrolled ? "/assets/img/Logo-1.png" : "/assets/img/party-deal-logo.png"}
+                            src={
+                                isOpen
+                                    ? "/assets/img/party-deal-logo.png"
+                                    : isScrolled
+                                    ? "/assets/img/party-deal-logo.png"
+                                    : "/assets/img/party-deal-logo.png"
+                            }
                             alt="Logo"
                             className="h-64 mt-[-85px] md:ml-[-48] ml-[-50px] object-contain"
                         />
@@ -53,16 +56,19 @@ export default function Navbar() {
                             <li key={item} className="relative">
                                 <a
                                     href={`/${item.toLowerCase()}`}
-                                    className={`text-white transition-all duration-500 ease-in-out ${textColor} ${
+                                    className={`text-white transition-all duration-500 ease-in-out ${
                                         isActive
-                                            ? `${activeTextColor} underline `
-                                            : "hover:text-yellow hover:underline"
+                                            ? "underline text-yellow"
+                                            : "hover:underline hover:text-yellow"
                                     }`}
                                     aria-label={`Navigate to ${item} Page`}
                                 >
                                     {item}
                                 </a>
-                                {isActive && (
+                                {isActive && isOpen && (
+                                    <span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-yellow rounded"></span>
+                                )}
+                                {isActive && !isOpen && (
                                     <span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-red rounded"></span>
                                 )}
                             </li>
@@ -76,7 +82,7 @@ export default function Navbar() {
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle Mobile Menu"
                 >
-                    {isOpen ? <FiX className="text-red" /> : <FiMenu className="text-yellow" />}
+                    {isOpen ? <FiX className="text-yellow" /> : <FiMenu className="text-yellow" />}
                 </button>
 
                 {/* Mobile Dropdown Menu */}
@@ -87,7 +93,7 @@ export default function Navbar() {
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="fixed inset-0 bg-white text-charcoal flex flex-col justify-center items-center space-y-8 z-40"
+                            className="fixed inset-0 bg-charcoal text-white flex flex-col justify-center items-center space-y-8 z-40"
                         >
                             {navLinks.map((item) => {
                                 const isActive =
@@ -98,10 +104,10 @@ export default function Navbar() {
                                         key={item}
                                         href={`/${item.toLowerCase()}`}
                                         onClick={() => setIsOpen(false)}
-                                        className={`text-6xl transition-all duration-500 ease-in-out ${textColor} ${
+                                        className={`text-6xl transition-all duration-500 ease-in-out ${
                                             isActive
-                                                ? `${activeTextColor} underline`
-                                                : "hover:text-red hover:underline"
+                                                ? "text-yellow underline"
+                                                : "hover:text-yellow hover:underline"
                                         }`}
                                         aria-label={`Navigate to ${item} Page`}
                                     >
