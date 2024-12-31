@@ -13,10 +13,10 @@ export default function ErrorPage() {
         404
       </h1>
       <h2 className="text-2xl md:text-4xl font-bold mb-6 text-center">
-        Oops! The page you're looking for isn't on the menu.
+        Oops! The food you're looking for isn't on the menu.
       </h2>
       <p className="text-lg md:text-xl text-center mb-8 max-w-md">
-        It seems we’ve run out of this dish! Let’s get you back to something
+        It seems we have run out of this dish! Let us get you back to something
         tasty.
       </p>
       <Link
