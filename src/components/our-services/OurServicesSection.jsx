@@ -27,7 +27,7 @@ export default function Services() {
                 From intimate gatherings to grand celebrations, our catering services are designed to make your events unforgettable. Whether it&#39;s a wedding, corporate function, or birthday party, we provide custom-tailored menus with fresh, locally sourced ingredients to ensure a remarkable dining experience.
             </p>
             </div>
-            <div className="flex justify-center md:justify-start ml-[-80px] md:ml-8">
+            <div className="flex justify-center md:justify-start ml-[-100px] md:ml-8">
             <Button
                 label="Book Our Service"
                 variant="primary"

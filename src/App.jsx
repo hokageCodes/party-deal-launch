@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import ErrorPage from "./components/404/ErrorPage";
 import BookingForm from "./pages/BookingsPage";
+import CompanyPage from "./pages/CompanyPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/bookings" element={<BookingForm />} />
+        <Route path="/company" element={<CompanyPage />} />
         <Route path="*" element={<ErrorPage />} /> {/* Wildcard Route */}
       </Routes>
       <Footer />

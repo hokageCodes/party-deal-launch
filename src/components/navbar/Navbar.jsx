@@ -56,7 +56,7 @@ export default function Navbar() {
                             <li key={item} className="relative">
                                 <a
                                     href={`/${item.toLowerCase()}`}
-                                    className={`text-white transition-all duration-500 ease-in-out ${
+                                    className={`text-[#f9f9f9] transition-all duration-500 ease-in-out ${
                                         isActive
                                             ? "underline text-yellow"
                                             : "hover:underline hover:text-yellow"

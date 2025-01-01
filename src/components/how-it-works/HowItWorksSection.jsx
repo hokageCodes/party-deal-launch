@@ -53,7 +53,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.8 }}
         >
           <div>
-            <h2 className="text-[#fafafa] text-3xl md:text-5xl font-bold mb-4 md:mb-0 tracking-wide">
+            <h2 className="text-[#fafafa] text-3xl md:text-5xl font-coolvetica mb-4 md:mb-0 tracking-wide">
               How It Works
             </h2>
             <p className="font-satoshi text-gray-400 text-base md:text-lg max-w-xl mt-2">
@@ -64,7 +64,7 @@ export default function HowItWorks() {
             <Button
               label="Book Now"
               variant="outline"
-              size="medium"
+              size="small"
               icon={<FiArrowRight />}
               onClick={() => console.log("Book Now Clicked!")}
             />
