@@ -19,7 +19,7 @@ export default function HowItWorks() {
     {
       title: "Fill Our Booking Form",
       description:
-        "Complete our booking form with the requested information to kickstart your journey.",
+        "Complete our booking form with the requested information.",
       icon: <FiFileText size={24} />,
     },
     {
@@ -57,7 +57,7 @@ export default function HowItWorks() {
               How It Works
             </h2>
             <p className="font-satoshi text-gray-400 text-base md:text-lg max-w-xl mt-2">
-              Follow these simple steps to make your event truly memorable.
+              Follow these simple steps in making your event truly memorable.
             </p>
           </div>
           <div className="mt-4 md:mt-0">
@@ -86,10 +86,10 @@ export default function HowItWorks() {
               <div className="w-16 h-16 flex items-center justify-center bg-yellow text-white rounded-full mb-4">
                 {step.icon}
               </div>
-              <h3 className="text-charcoal text-xl font-bold mb-2 font-coolvetica">
+              <h3 className="text-charcoal text-xl font-bold mb-2 font-coolvetica tracking-wide">
                 {step.title}
               </h3>
-              <p className="text-gray-600 text-sm md:text-base font-coolvetica">
+              <p className="text-gray-600 text-sm md:text-base font-satoshi">
                 {step.description}
               </p>
             </motion.div>

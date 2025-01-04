@@ -24,7 +24,7 @@ export default function Services() {
                 Our Catering Services
             </h1>
             <p className="text-gray-700 font-satoshi text-lg leading-relaxed mb-6">
-                From intimate gatherings to grand celebrations, our catering services are designed to make your events unforgettable. Whether it&#39;s a wedding, corporate function, or birthday party, we provide custom-tailored menus with fresh, locally sourced ingredients to ensure a remarkable dining experience.
+                Our catering services are designed to make your events unforgettable. We provide custom-tailored menus with fresh, carefully sourced ingredients to ensure a remarkable dining experience.
             </p>
             </div>
             <div className="flex justify-center md:justify-start ml-[-100px] md:ml-8">
@@ -52,7 +52,7 @@ export default function Services() {
           </div>
           <div className="h-48 w-full overflow-hidden relative">
             <img
-              src="/assets/img/wedding.jpg"
+              src="/assets/img/wed.jpg"
               alt="wedding service"
               className="object-cover"
             />
@@ -74,7 +74,7 @@ export default function Services() {
           </div>
           <div className="h-48 w-full overflow-hidden relative">
             <img
-              src="/assets/img/bday.webp"
+              src="/assets/img/bday.jpg"
               alt="birthday service"
               className="object-cover"
             />
@@ -96,7 +96,7 @@ export default function Services() {
           </div>
           <div className="h-48 w-full overflow-hidden relative">
             <img
-              src="/assets/img/office.png"
+              src="/assets/img/office.jpg"
               alt="corporate meeting service"
                 className="object-cover"
             />
@@ -118,7 +118,7 @@ export default function Services() {
           </div>
           <div className="h-48 w-full overflow-hidden relative">
             <img
-              src="/assets/img/picnic.jpg"
+              src="/assets/img/picnicc.avif"
               alt="picnic service"
               className="object-cover"
             />

@@ -66,10 +66,10 @@ export default function Navbar() {
                                     {item}
                                 </a>
                                 {isActive && isOpen && (
-                                    <span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-yellow rounded"></span>
+                                    <span className="absolute left-0 w-full h-[2px] bg-yellow rounded"></span>
                                 )}
                                 {isActive && !isOpen && (
-                                    <span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-red rounded"></span>
+                                    <span className="absolute bottom-[-2px] left-0 w-full h-[2px] rounded"></span>
                                 )}
                             </li>
                         );

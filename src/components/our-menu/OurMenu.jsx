@@ -2,7 +2,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
-import Button from "../button/Button";
 
 const MenuSection = () => {
   return (
@@ -33,17 +32,16 @@ const MenuSection = () => {
             courses to delightful desserts, there's something for everyone. Download our full menu
             now and plan your next meal with us!
           </p>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Button
-              label="View Menu"
-              variant="primary"
-              size="small"
-              icon={<FiArrowRight />}
-              onClick={() => window.location.href("/")}
-            />
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <a
+              className="inline-flex items-center px-6 py-3 bg-yellow text-white border-2 border-charcoal hover:bg-charcoal hover:text-yellow font-satoshi rounded-md transition-all duration-300"
+              href="/assets/img/party-deal-food-menu.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Menu
+              <FiArrowRight className="ml-2" />
+            </a>
           </motion.div>
         </motion.div>
 

@@ -10,13 +10,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroSection() {
   useEffect(() => {
-    // Animate heading and paragraph to part away on scroll
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#hero-section",
-        start: "top top", // When the top of the section hits the top of the viewport
-        end: "bottom top", // When the bottom of the section hits the top of the viewport
-        scrub: true, // Smooth scrubbing effect
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
       },
     });
 
@@ -26,10 +25,8 @@ export default function HeroSection() {
       duration: 1,
     })
       .to("#hero-paragraph", { x: 200, opacity: 0, duration: 1 }, "<")
-      .to("#hero-buttons", { y: 100, opacity: 0, duration: 1 }, "<")
-      .to("#hero-image", { scale: 0.8, opacity: 0, duration: 1 }, "<");
+      .to("#hero-buttons", { y: 100, opacity: 0, duration: 1 }, "<");
 
-    // Reverse animations when scrolling back
     ScrollTrigger.create({
       trigger: "#hero-section",
       start: "top top",
@@ -37,7 +34,6 @@ export default function HeroSection() {
         gsap.to("#hero-heading", { x: 0, opacity: 1, duration: 0.6 });
         gsap.to("#hero-paragraph", { x: 0, opacity: 1, duration: 0.6 });
         gsap.to("#hero-buttons", { y: 0, opacity: 1, duration: 0.6 });
-        gsap.to("#hero-image", { scale: 1, opacity: 1, duration: 0.6 });
       },
     });
   }, []);
@@ -45,30 +41,32 @@ export default function HeroSection() {
   return (
     <section
       id="hero-section"
-      className="bg-charcoal font-coolvetica relative flex flex-col lg:flex-row items-center justify-center gap-8 p-8 lg:p-16 h-screen mt-16"
+      className="font-coolvetica relative bg-cover bg-no-repeat h-screen mt-12 flex items-center"
+      style={{
+        backgroundImage: "url('/assets/img/party1.jpg')",
+        backgroundPosition: "right",
+        backgroundSize: "cover",
+        opacity: 0.9, // Set the opacity for the background image
+      }}
     >
-      {/* Left Side */}
-      <div className="flex flex-col items-center lg:items-start gap-6 text-center lg:text-left max-w-4xl z-10 mt-12 lg:mt-0">
+      {/* Left Content */}
+      <div className="bg-charcoal flex flex-col justify-center items-start gap-6 text-left max-w-2xl px-8 mx-12 rounded-2xl z-10 p-12 opacity-80">
         <h1
           id="hero-heading"
-          className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-wide mt-8 md:mt-12"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-wide"
         >
-          Special{" "}
-          <span className="text-yellow">Occasions</span> Deserve Special
+          Special <span className="text-yellow">Occasions</span> Deserve Special
           Catering to
         </h1>
         <p
           id="hero-paragraph"
-          className="font-satoshi text-gray-400 text-base md:text-lg lg:text-xl max-w-lg"
+          className="font-satoshi text-gray-200 text-base md:text-base lg:text-base max-w-xl"
         >
           Whether you&#39;re hosting a wedding, corporate event, or private
           party in Nigeria, we excel at delivering customized catering services
           designed to impress your guests and leave lasting memories.
         </p>
-        <div
-          id="hero-buttons"
-          className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start"
-        >
+        <div id="hero-buttons" className="flex flex-col md:flex-row gap-4">
           <Button
             label="Book Now"
             variant="primary"
@@ -76,32 +74,13 @@ export default function HeroSection() {
             icon={<FiArrowRight />}
             onClick={() => console.log("Button Clicked!")}
           />
-          <div className="hidden md:block">
-            <Button
-              label="Our Services"
-              variant="outline"
-              size="large"
-              icon={<FiArrowRight />}
-              onClick={() => console.log("Button Clicked!")}
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Right Side */}
-      <div
-        id="hero-image"
-        className="relative flex justify-center lg:justify-end w-full lg:w-auto"
-      >
-        <div className="rounded-2xl overflow-hidden max-w-full h-auto lg:mt-20">
-          <img
-            src="/assets/img/ch.png"
-            alt="American Special Salad"
-            className="object-contain w-[80%] lg:w-[400px] h-auto mx-auto lg:mx-0"
+          <Button
+            label="Our Services"
+            variant="outline"
+            size="large"
+            icon={<FiArrowRight />}
+            onClick={() => console.log("Button Clicked!")}
           />
-        </div>
-        <div className="absolute top-4 right-4 bg-red px-4 py-2 mt-12 rounded-lg shadow-md text-white font-medium text-sm md:text-base">
-          Today&#39;s Choice
         </div>
       </div>
     </section>
