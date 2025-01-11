@@ -41,26 +41,26 @@ export default function HeroSection() {
   return (
     <section
       id="hero-section"
-      className="font-coolvetica relative bg-cover bg-no-repeat h-screen mt-12 flex items-center"
+      className="font-coolvetica relative bg-cover bg-no-repeat h-screen mt-16 flex items-center"
       style={{
-        backgroundImage: "url('/assets/img/party1.jpg')",
+        backgroundImage: "url('/assets/img/chef.avif')",
         backgroundPosition: "right",
         backgroundSize: "cover",
-        opacity: 0.9, // Set the opacity for the background image
+        opacity: 0.7, // Set the opacity for the background image
       }}
     >
       {/* Left Content */}
-      <div className="bg-charcoal flex flex-col justify-center items-start gap-6 text-left max-w-2xl px-8 mx-12 rounded-2xl z-10 p-12 opacity-80">
+      <div className="flex flex-col justify-center items-start gap-6 text-left max-w-4xl px-8 z-10">
         <h1
           id="hero-heading"
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-wide"
+          className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight tracking-wide"
         >
           Special <span className="text-yellow">Occasions</span> Deserve Special
           Catering to
         </h1>
         <p
           id="hero-paragraph"
-          className="font-satoshi text-gray-200 text-base md:text-base lg:text-base max-w-xl"
+          className="font-satoshi text-gray-200 text-base md:text-lg lg:text-xl max-w-lg"
         >
           Whether you&#39;re hosting a wedding, corporate event, or private
           party in Nigeria, we excel at delivering customized catering services
